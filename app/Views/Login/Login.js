@@ -14,7 +14,7 @@ const { auth,firestore } = firebaseSetup();
 GoogleSignin.configure({
     webClientId: '8382336119-r39agun82720btckc54bfm4ef9s8v0rj.apps.googleusercontent.com',
 });
-export default class MobileLogin extends Component {
+export default class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -59,11 +59,18 @@ export default class MobileLogin extends Component {
     storeUserInfo = (userData) => {
         let mainUserData = userData.additionalUserInfo.profile;
         let uid = userData.user._user.uid;
+        
         this.getFireStoreData(mainUserData,uid);
         console.log(mainUserData, uid);
     }
 
     getFireStoreData = async (userData,uid) => {
+        let user={
+            picture:userData.picture,
+            uid: uid,
+            name:userData.given_name+" "+userData.family_name,
+        }
+        global.globalUser = user;
         firestore().collection('chatUsers').doc(uid).set({
             email: userData.email,
             name: userData.given_name+" "+userData.family_name,

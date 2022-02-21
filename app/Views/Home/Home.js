@@ -58,6 +58,18 @@ export default class Home extends Component {
 
     }
 
+    renderMenu=()=>{
+        return(
+            <View style={{height:50,backgroundColor: ColorSettings.colorPrimary,marginBottom:10,justifyContent: "center",alignItems: "center"}}>
+                <H2 textTitle="Bakers Chat App" textStyle={{color:ColorSettings.colorWhite}} />
+            </View>
+        )
+    }
+    onPressUserCard=(index,userDetails)=>{
+        console.log("Sent TO",userDetails)
+        Actions.ChatRoom({sentTo: userDetails});
+    }
+
     renderChatList = () => {
         return (
            
@@ -66,7 +78,7 @@ export default class Home extends Component {
                     keyExtractor={(item) => item.uid}
                     renderItem={({item, index}) => (
                         <View style={{marginTop:5}}>
-                            <TouchableOpacity style={styles.itemContainer}>
+                            <TouchableOpacity style={styles.itemContainer} onPress={()=>this.onPressUserCard(index,item)}>
                                 <Image style={[styles.RoundImage]} source={{ uri: item.picture }} />
                                 <View>
                                     <H2 textTitle={item.name} textStyle={styles.itemTitle} />
@@ -85,6 +97,7 @@ export default class Home extends Component {
         console.log("State", this.state.users);
         return (
             <View style={styles.container}>
+                {this.renderMenu()}
                 {this.renderChatList()}
 
             </View>

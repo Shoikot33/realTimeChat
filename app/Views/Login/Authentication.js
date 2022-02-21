@@ -12,11 +12,7 @@ import DeviceInfo from "react-native-device-info";
 export default class Authentication extends Component {
     constructor(props) {
         super(props);
-        global.globalAccessToken = null;
-        global.globalRefreshToken = null;
-        global.globalUserId = null;
-        global.globalTenant = null;
-        global.globalUserName = null;
+        global.globalUser = null;
 
 
 
