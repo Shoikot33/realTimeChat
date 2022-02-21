@@ -1,0 +1,59 @@
+{
+  "name": "bakersapp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "^1.12.1",
+    "@react-native-community/netinfo": "^7.1.7",
+    "@react-native-firebase/analytics": "^14.0.1",
+    "@react-native-firebase/app": "^14.0.1",
+    "@react-native-firebase/auth": "^14.0.1",
+    "@react-native-firebase/firestore": "^14.5.0",
+    "@react-native-google-signin/google-signin": "^7.1.0",
+    "@react-navigation/stack": "^5.14.5",
+    "faker": "^5.5.3",
+    "firebase": "^9.6.1",
+    "lottie-react-native": "^5.0.1",
+    "moment": "^2.29.1",
+    "native-base": "^2.15.2",
+    "react": "17.0.1",
+    "react-native": "0.64.0",
+    "react-native-animatable": "^1.3.3",
+    "react-native-device-info": "^8.4.8",
+    "react-native-easy-grid": "^0.2.2",
+    "react-native-fbsdk-next": "^7.1.0",
+    "react-native-firebase": "^5.6.0",
+    "react-native-gesture-handler": "^1.10.3",
+    "react-native-material-menu": "^2.0.0",
+    "react-native-modal": "^12.0.2",
+    "react-native-reanimated": "^2.1.0",
+    "react-native-router-flux": "^4.3.1",
+    "react-native-safe-area-context": "^3.2.0",
+    "react-native-safe-modules": "^1.0.3",
+    "react-native-screens": "^3.2.0",
+    "react-native-splash-screen": "^3.2.0",
+    "react-native-svg": "^12.1.1",
+    "react-native-svg-transformer": "^0.14.3",
+    "react-native-tabs-section-list": "^1.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "7.14.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.64.0",
+    "react-test-1": "17.0.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
